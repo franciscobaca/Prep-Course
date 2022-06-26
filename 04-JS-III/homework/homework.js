@@ -74,7 +74,7 @@ function arrayContiene(array, elemento) {
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
 
-  for(var i = 0; i<array.length; i++){
+  for(var i = 0; i < array.length; i++){
     if(array[i] === elemento){
       return true;
     }
@@ -89,7 +89,7 @@ function agregarNumeros(numeros) {
   // Tu código:
   var suma = 0;
 
-  for (var i=0; i<numeros.length; i++){
+  for (var i = 0; i < numeros.length; i++){
     suma = suma + numeros[i];
   }
 
@@ -135,7 +135,7 @@ function numeroMasGrande(numeros) {
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
-  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
+  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
 
   if (arguments.length < 1){
@@ -208,11 +208,12 @@ function todosIguales(arreglo) {
   
 
   for (var i = 0; i < arreglo.length - 1; i++){
-    if(arreglo[i] === arreglo[i+1]){
-      return true;
+    if(arreglo[i] != arreglo[i+1]){
+      return false;
     }
   }
-      return false;
+  
+  return true;
 } 
 
 
@@ -273,7 +274,7 @@ function breakStatement(numero) {
     if (i === sumador){
       break;
     
-    } else{
+    } else {
       array.push(sumador);
     }
   }
@@ -294,13 +295,14 @@ function continueStatement(numero) {
   var sumador = numero;
 
   for (var i = 0; i < 10; i++){
+    
+    if (i === 5){
+      continue;
 
+    } else {
       sumador = sumador + 2;
       array.push(sumador);
-
-      if (i === 5){
-        continue;
-      }
+    }
 
   }
 
